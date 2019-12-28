@@ -133,3 +133,17 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = '/opt/data/static'
+STATICFILES_FINDERS = [
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+]
+
+# Settings for django-bootstrap4
+BOOTSTRAP4 = {
+    'javascript_in_head': False,
+    'include_jquery': False,
+    'javascript_url': {
+        'url': 'https://cdn.jsdelivr.net/npm/bootstrap.native@2.0.15/dist/bootstrap-native-v4.min.js'
+    },
+    'popper_url': None
+}

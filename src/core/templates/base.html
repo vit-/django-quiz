@@ -1,0 +1,14 @@
+{% extends 'bootstrap4/bootstrap4.html' %}
+
+{% load static %}
+
+{% block bootstrap4_extra_head %}
+    <title>{% block bootstrap4_title %}Вікторіна курва мать!{% block title %}{% endblock %}{% endblock %}</title>
+    <meta name="apple-mobile-web-app-title" content="Вікторіна">
+    <meta name="application-name" content="Вікторіна">
+    <link rel="stylesheet" href="{% get_static_prefix %}css/base.css">
+{%  endblock %}
+
+{% block bootstrap4_content %}
+    {% block content %}(no content){% endblock %}
+{%  endblock %}

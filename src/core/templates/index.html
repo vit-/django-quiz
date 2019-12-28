@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="row mx-auto">
+            <h1>Шалом котики!</h1>
+        </div>
+        <div class="row mx-auto">
+            <p>А давайте-но зіграємо в одну гру?</p>
+        </div>
+        <div class="row mx-auto">
+            <a class="btn btn-primary btn-lg" href="{% url 'question_index' %}" role="button">Вйо до пригод!</a>
+        </div>
+    </div>
+{% endblock %}
