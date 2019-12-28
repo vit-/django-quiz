@@ -4,16 +4,16 @@
     <div class="container">
         {% if answer %}
             <div class="row mx-auto">
-                <div class="alert alert-{% if answer.is_correct %}success{% else %}danger{% endif %}" role="alert">
+                <div class="alert alert-{% if answer.is_correct %}success{% else %}danger{% endif %} w-100 text-center" role="alert">
                     {% if answer.is_correct %}Еге ж{% else %}Ніт{% endif %}!
                 </div>
             </div>
             {% if answer.explanation_text %}
                 <div class="row mx-auto"><p>{{ answer.explanation_text }}</p></div>
             {% endif %}
-            <div class="row mx-auto"><hr></div>
+            <div class="row mx-auto"><hr class="w-100"></div>
             {% if answer.is_correct and question.next_question_id %}
-                <a class="btn btn-primary" href="{% url 'question' question_pk=question.next_question_id %}">Поїхали далі!</a>
+                <a class="btn btn-primary w-100 text-center" href="{% url 'question' question_pk=question.next_question_id %}">Поїхали далі!</a>
             {% endif %}
         {% endif %}
 
@@ -22,7 +22,7 @@
             {% for option in question.answer_set.all %}
                 <div class="row mx-auto">
                     <a
-                            class="btn btn-{% if answer == option %}danger{% else %}secondary{% endif %}"
+                            class="btn btn-{% if answer == option %}danger{% else %}secondary{% endif %} w-100 text-center"
                             href="{% url 'question_answer' question_pk=question.pk answer_pk=option.pk %}"
                     >
                         {{ option.text }}
